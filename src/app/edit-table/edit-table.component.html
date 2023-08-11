@@ -1,0 +1,36 @@
+<div class="table">
+  <table *ngIf="tabularHeader.length">
+    <tr>
+      <th *ngFor="let head of tabularHeader">
+        {{ head }}
+      </th>
+    </tr>
+    <tr *ngFor="let row of tabularCells">
+      <td *ngFor="let item of row">{{ item }}</td>
+    </tr>
+  </table>
+  <table *ngIf="!tabularHeader.length">
+    <tr>
+      <th *ngFor="let item of data[0].columns">
+        {{ item?.label }}
+      </th>
+    </tr>
+    <tr *ngFor="let rowData of data[0].content">
+      <td>{{ rowData.name }}</td>
+      <td>{{ rowData.age }}</td>
+      <td>{{ rowData.email }}</td>
+      <td>{{ rowData.location }}</td>
+      <td>{{ rowData.phoneNumber }}</td>
+      <td>{{ rowData.occupation }}</td>
+      <td>{{ rowData.hobbies }}</td>
+      <td>{{ rowData.country }}</td>
+      <td>{{ rowData.education }}</td>
+      <td>{{ rowData.website }}</td>
+      <td>{{ rowData.gender }}</td>
+      <td>{{ rowData.favoriteColor }}</td>
+      <td>{{ rowData.skills }}</td>
+      <td>{{ rowData.membership }}</td>
+      <td>{{ rowData.address }}</td>
+    </tr>
+  </table>
+</div>

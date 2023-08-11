@@ -1,0 +1,14 @@
+.table {
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 500px;
+  table {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    td, th {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  }
+}
